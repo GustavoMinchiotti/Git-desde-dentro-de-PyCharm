@@ -78,6 +78,8 @@ En este ejemplo de la otra carpeta me muestra las ramas de manera gráfica. **si
 
 ## Es interesante ver como trabajar Markdown en VsCode o IntelliJ crea carpetas distintas y trabaja de otra manera los archivos.
 
+**Creé un repo en GitHub desde dentro de PyCharm tardé unos minutos, pero lo hice simplemente usando la documentación en línea de IntelliJ**
+
 # 1:15:00 git stash
 
 
