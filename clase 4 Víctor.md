@@ -3,7 +3,12 @@
 ### Utilización de **SOFT reset**
 Inicialmente explica a través de varios commits como van avanzando los proyectos y que los últimos cambios van a ser donde se posiciona el **head** o cabezal es donde estamos trabajando.
 Para cambiar la posición del **head** una de las herramientas es el comando ***git reset --soft*** se utiliza de la siguiente manera: ***git reset --soft*** + ***head*** + ***~*** + ***3*** // *3 es solo un ejemplo representa el número de posiciones hacia atrás que quiero volver o deshacer*, esto último lo determino con ***git log***.
-No se borraron los archivos, pero SI volvió hacia atrás.
+No se borraron los archivos, pero SI volvió hacia atrás. 
+
+Ejemplo real donde me equivoqué:
+![img_5.png](img_5.png)
+
+Volví un lugar atrás. 
 
 ### Utilización de **HARD reset**
 La diferencia principal es que al volver hacia un punto de restauración anterior borra lo que no reconoce. **Sintaxis:**  ***git reset --hard*** + ***head*** + ***~*** + ***número hacia atrás desde el head.***
@@ -97,3 +102,18 @@ Enumera todos los sets de cambios en guardado rápido
 Restaura los archivos guardados más recientemente
 * **git stash drop**
 Elimina el set de cambios en guardado rápido más reciente
+
+
+
+Con la creación de los nuevos txt representaba que estaba trabajando en algo y tuve que cambiar a otra tarea **AHÍ** es donde entra ***git stash***
+y puedo ver que están como en un limbo no se borraron pero no están para hacer *add o commit*.
+
+>Ahora hago el supuesto trabajo urgente "Urgente.txt" luego su commit y vuelvo para recuperar lo subido a stash.
+
+![img_6.png](img_6.png)
+
+En la imagen muestra los archivos en carpeta para add, pero nos indica que están en *stash* hice *add* y **commit -am** lo cual fue un error porque sube todo y solo quería subir urgente.txt por ello tuve que volver atrás haciendo un ***git reset --soft***.
+
+
+
+
