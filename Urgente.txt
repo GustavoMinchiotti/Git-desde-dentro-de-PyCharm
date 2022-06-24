@@ -1,0 +1,1 @@
+Con este archivo utilizo los medios convencionales add y commit para luego volver a utilizar stash y recuperar lo anterior que es todo el sentido de esta práctica.
