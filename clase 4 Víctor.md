@@ -59,11 +59,11 @@ Traer desde un repo remoto por ejemplo GitHub una rama para trabajar en ella. **
 
 En un entrono corporativo es más frecuente utilizar ***git merge*** y en uno local o propio es frecuente utilizar ***git rebase*** ambos son similares en concepto pero diferentes en operación 
 
-#### Git merge 
+### Git merge 
 
 Para fusionar debo primero situar el head en la rama a la cual quiero traer los cambios, **sintaxis:** ***git merge + rama que quiero fusionar*** si no hay conflictos va a ser un *fast forward* si la rama master avanzo aunque sea en un commit el merge va a pasar a ser "recursivo"   
 
-#### Git rebase
+### Git rebase
 
 Funciona similar a *merge* la gran diferencia se basa en que para no ver una gran cantidad de commits en el log con *rebase* se reescribe el historial de confirmaciones (va hacia atrás) también o sea se modifica y simplifica el log.
 **Sintaxis:** ***git rebase + nombre de la rama que traigo para fusionar*** 
@@ -80,7 +80,20 @@ En este ejemplo de la otra carpeta me muestra las ramas de manera gráfica. **si
 
 **Creé un repo en GitHub desde dentro de PyCharm tardé unos minutos, pero lo hice simplemente usando la documentación en línea de IntelliJ**
 
-# 1:15:00 git stash
+### Git stash
 
+Git stash es "el modo no molestar" crea una especie de carpeta/directorio paralelo al trabajo que estábamos haciendo si tenemos que dedicarnos a otra parte del proyecto de manera urgente, otro ejemplo es como si los cambios que estábamos trabajando en ese momento se guardan en un cajon y seguimos con el nuevo pedido.
+Todo esto en palabras de Victor. 
 
+GUARDAR FRAGMENTOS
 
+Almacena y restaura cambios incompletos
+
+* **git stash**
+Almacena temporalmente todos los archivos tracked modificados
+* **git stash list**
+Enumera todos los sets de cambios en guardado rápido
+* **git stash pop**
+Restaura los archivos guardados más recientemente
+* **git stash drop**
+Elimina el set de cambios en guardado rápido más reciente
