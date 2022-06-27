@@ -95,7 +95,7 @@ GUARDAR FRAGMENTOS
 Almacena y restaura cambios incompletos
 
 * **git stash**
-Almacena temporalmente todos los archivos tracked modificados
+Almacena temporalmente todos los archivos **tracked** modificados (*si no se hace add no funciona*)
 * **git stash list**
 Enumera todos los sets de cambios en guardado rápido
 * **git stash pop**
@@ -103,17 +103,29 @@ Restaura los archivos guardados más recientemente
 * **git stash drop**
 Elimina el set de cambios en guardado rápido más reciente
 
-
+![img_12.png](img_12.png)
 
 Con la creación de los nuevos txt representaba que estaba trabajando en algo y tuve que cambiar a otra tarea **AHÍ** es donde entra ***git stash***
-y puedo ver que están como en un limbo no se borraron pero no están para hacer *add o commit*.
+y puedo ver que están como en un limbo no se borraron, pero no figuran para hacer *commit*. **MUY IMPORTANTE** En windows funciona solo si están en **stage** o sea que fue hecho el **add**
+
+![img_13.png](img_13.png) 
+![img_14.png](img_14.png)
+
+Existen, pero están en estado **Untracked** tampoco se ven en la carpeta.
+
 
 >Ahora hago el supuesto trabajo urgente "Urgente.txt" luego su commit y vuelvo para recuperar lo subido a stash.
 
-![img_6.png](img_6.png)
+![img_15.png](img_15.png)
+![img_16.png](img_16.png)
 
-En la imagen muestra los archivos en carpeta para add, pero nos indica que están en *stash* hice *add* y **commit -am** lo cual fue un error porque sube todo y solo quería subir urgente.txt por ello tuve que volver atrás haciendo un ***git reset --soft***.
+Para recuperar los archivos en los que estaba trabajando utilizo el comando ***git stash apply*** de esta manera los puedo visualizar tanto en la terminal git como en la carpeta.
+Mientras en el commits no hay ningún error ni rama no deseada.
 
+![img_17.png](img_17.png)
 
+![img_18.png](img_18.png)
 
+>Por último agrego al commit los archivos de stash y compruebo que no generó errores en el log nada se perdió.
 
+![img_19.png](img_19.png)
