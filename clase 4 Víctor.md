@@ -129,3 +129,22 @@ Mientras en el commits no hay ningún error ni rama no deseada.
 >Por último agrego al commit los archivos de stash y compruebo que no generó errores en el log nada se perdió.
 
 ![img_19.png](img_19.png)
+
+### Cherry-Pick
+
+En lugar de fusionar ramas enteras Voy a fusionar commits completos, un ejemplo es cuando se aplica un parche, puedo ir hacia atrás y solo agregar eso sin modificar las otras ramas completas.
+
+La ejecución de cherry-pick es el acto de elegir una confirmación de una rama y aplicarla a otra.
+
+*Por ejemplo, si una confirmación se aplica en la rama equivocada. Puedes cambiar a la rama correcta y ejecutar cherry-pick 
+en la confirmación para aplicarla a donde debería estar.* **Más simple: toma el cambio que yo le indico y lo mete en mi rama actual**
+
+>Sintaxis: **git cherry-pick adf46ef**  *(git cherry-pick + commit-SHA = **el número corto de git log --oneline**)* 
+> 
+> Para seleccionar un rango de cambios: *git cherry-pick + cff0c2c^..adf46ef* (Se lee, 1er commit del rango + ^.. + ultimo 
+> del rango, en este caso los extremos son incluidos, SIN ESPACIOS)
+> 
+> Para un rango, pero sin los extremos sacamos el ^ quedaría: *git cherry-pick + cff0c2c..adf46ef*
+
+### Workflow habitual trabajando con git
+
