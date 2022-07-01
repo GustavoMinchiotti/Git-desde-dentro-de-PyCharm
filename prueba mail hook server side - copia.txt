@@ -1,0 +1,1 @@
+prueba para configurar el envio de mails con un hook server side
