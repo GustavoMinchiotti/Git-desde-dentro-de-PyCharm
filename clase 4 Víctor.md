@@ -148,3 +148,69 @@ en la confirmación para aplicarla a donde debería estar.* **Más simple: toma 
 
 ### Workflow habitual trabajando con git
 
+Forma standard de trabajar en GIT (la que usa Victor) Update -> change -> review -> commit
+
+**Update** comienzo con un ***git pull*** o ***git fetch*** si estoy trabajando en un repositorio remoto para traer el trabajo y ver si hubo cambios y cuáles fueron
+
+**Change** hago mi trabajo en el o los archivos. 
+
+**Review** verifico con ***git diff*** por ejemplo
+
+**Commit** guardo los cambios ***git commit*** 
+
+### Forking workflow mas GIT CLONE
+
+Trabajando fuera de mi stage local, Voy a clonar un repositorio remoto, haré mis cambios y solicitaré permiso al 
+dueño/autor del repo que acepte los cambios.
+
+_Ejemplo de trabajo:_ hago un fork de un repositorio para clonarlo.
+
+![img_20.png](img_20.png)
+
+En el repositorio clonado puedo trabajar libremente. Para obtenerlo o bajarlo copio la url y mediante ***git clone*** lo descargo en local. 
+
+![img_21.png](img_21.png)
+![img_22.png](img_22.png)
+
+>Creé una carpeta inicialicé una terminal y cloné los ej, resueltos de OB.
+
+### Alterar el comportamiento de git, hooks
+
+Git hooks are scripts that run automatically every time a particular event occurs in a Git repository. They let you customize 
+Git’s internal behavior and trigger customizable actions at key points in the development life cycle.
+All Git hooks are ordinary scripts that Git executes when certain events occur in the repository. This makes them very easy to install and configure.
+
+Hooks can reside in either local or server-side repositories, and they are only executed in response to actions in that repository.
+
+![hooks.jpg](hooks.jpg)
+
+>https://www.atlassian.com/git/tutorials/git-hooks
+
+Un ejemplo sencillo es el hook de pre commit, si intento nombrar a un archivo con caracteres no ascii me da un error y advertencia
+
+![img_23.png](img_23.png)
+
+### Scripts en server-side
+
+Server-side Hooks
+Server-side hooks work just like local ones, except they reside in server-side repositories (e.g., a central repository, or a developer’s public repository). When attached to the official repository, some of these can serve as a way to enforce policy by rejecting certain commits.
+
+There are 3 server-side hooks that we’ll be discussing in the rest of this article:
+
+* pre-receive
+* update
+* post-receive
+
+All of these hooks let you react to different stages of the git push process.
+
+### Mandar notificaciones por Email
+Lo realiza como un script server side dentro de git config. (*al ser server side solo será ejecutado cuando haga un push*)
+
+Abrí en block de notas el archivo config de .git y lo modifiqué agregando: 
+> [hooks]
+	mailinglist = "gustavominchiotti@gamil.com"
+
+![img_25.png](img_25.png)
+
+![img_24.png](img_24.png)
+
