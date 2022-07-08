@@ -193,7 +193,8 @@ Un ejemplo sencillo es el hook de pre commit, si intento nombrar a un archivo co
 ### Scripts en server-side
 
 Server-side Hooks
-Server-side hooks work just like local ones, except they reside in server-side repositories (e.g., a central repository, or a developer’s public repository). When attached to the official repository, some of these can serve as a way to enforce policy by rejecting certain commits.
+Server-side hooks work just like local ones, except they reside in server-side repositories (e.g., a central repository, 
+or a developer’s public repository). When attached to the official repository, some of these can serve as a way to enforce policy by rejecting certain commits.
 
 There are 3 server-side hooks that we’ll be discussing in the rest of this article:
 
@@ -214,3 +215,5 @@ Abrí en block de notas el archivo config de .git y lo modifiqué agregando:
 
 ![img_24.png](img_24.png)
 
+No funcionó porque él había creado un repo y su hook desde un servidor y en mi caso estaba trabajando en local ver ese 
+error más adelante.
